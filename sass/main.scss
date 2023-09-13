@@ -1,0 +1,129 @@
+@use './reset' as *;
+@use './colors' as *;
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $Pale-blue;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 600px;
+	width: 340px;
+	font-size: 1.6rem;
+	text-align: center;
+	background-color: $White;
+	border-radius: 1em;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+	overflow: hidden;
+
+	&__img {
+		height: 28%;
+		width: 100%;
+	}
+
+	&__info {
+		margin: 2.2em 2.2em 1.8em 2.2em;
+
+		&-heading {
+			padding-bottom: 0.8em;
+			font-weight: 900;
+		}
+
+		&-text {
+			font-weight: 500;
+			line-height: 2.4rem;
+			color: $Desaturated-blue;
+		}
+	}
+
+	&__plan {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 85%;
+		height: 85px;
+		margin-bottom: 1.8em;
+		background-color: $Very-pale-blue;
+		border-radius: 15px;
+
+		&-offer {
+			padding-right: 1.5em;
+
+			&-info {
+				font-weight: 900;
+				list-style: none;
+
+				&--highlights {
+					font-weight: normal;
+					color: $Desaturated-blue;
+				}
+			}
+		}
+
+		&-change {
+			font-weight: 700;
+			cursor: pointer;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $Bright-blue-hover;
+			}
+		}
+	}
+
+	&__btn {
+		width: 85%;
+		height: 54px;
+		background: none;
+		border: none;
+		color: $Desaturated-blue;
+		font-size: 1.5rem;
+		font-weight: 900;
+		cursor: pointer;
+
+		&--highlights {
+			margin-bottom: 0.5em;
+			color: $White;
+			background-color: $Bright-blue;
+			border-radius: 10px;
+			box-shadow: $Bright-blue-shadow 0px 20px 30px;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: $Bright-blue-hover;
+			}
+		}
+		&-cancel {
+			transition: color 0.3s;
+
+			&:hover {
+				color: $Dark-blue;
+			}
+		}
+	}
+}
+
+.attribution {
+	padding-top: 2em;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+// --MEDIA--
+
+@media (min-width: 1440px) {
+	body {
+		background-image: url(../images/pattern-background-mobile.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
